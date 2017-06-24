@@ -1,0 +1,28 @@
+.main {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+
+}
+.header {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+}
+
+.container {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+
+}
+.footer {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: auto;
+}
