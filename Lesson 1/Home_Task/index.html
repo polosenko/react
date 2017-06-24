@@ -12,70 +12,11 @@
 </head>
 <body>
 <div class="main">
-    <div class="header"> </div>
-    <div class="container"> </div>
-    <div class="footer"> </div>
 
 </div>
 </body>
 
-<script type="text/jsx">
-    var Badge = React.createClass ({
-        render function () {
-            return (<button className="btn-link-disabled-color" type="button">
-                {this.props.title} <span className="badge">{this.props.number}</span>
-                </button>)
-        }
-    });
-
-    var Thumbnail = React.createClass ({
-        render: function () {
-            return <div class="col-sm-6 col-md-4">
-            <div className ="thumbnail">
-                <img
-            src = {this.props.imageUrl}
-            alt = "" />
-                    <div className="caption">
-                    <h3 {this.props.header}></h3>
-                <p {this.props.description}></p>
-                <p><Badge title {this.props.title} number {this.props.number}></p>
-            </div>
-          </div>
-       </div>
-        }
-   });
-
-//                var ThumbnailList1=React.createClass({
-//                render: function (){
-//                var list = this.props.headerData.map(function(thumbnailProps){
-//                return <Thumbnail {...thumbnailProps}/>
-//            });
-//                return <div>
-//                {list}
-//                </div>
-//            }
-//            });
-
-            var ThumbnailList=React.createClass({
-            render: function (){
-                var list = this.props.ThumbnailData.map(function(thumbnailProps){
-                return <Thumbnail {...thumbnailProps}/>
-            });
-                return <div>
-                {list}
-                </div>
-            }
-            });
-//                var ThumbnailList1=React.createClass({
-//                render: function (){
-//                var list = this.props.headerData.map(function(thumbnailProps){
-//                return <Thumbnail {...thumbnailProps}/>
-//            });
-//                return <div>
-//                {list}
-//                </div>
-//            }
-//            });
+<script type="text/babel">
 
     var options = {
         thumbnailData: [{
@@ -93,16 +34,111 @@
 
         }],
         headreData:{
-
-        }
-        footerData: {
-            link: 'git'
-            }
-
+            link: 'https://github.com/polosenko/my_site/blob/master/src/templates/header.html'
         },
-    };
-            var element = React.createElement(ThumbnailList, options);
-            React.render(element, document.querySelector('.container'));
+
+        footerData: {
+            link: 'https://github.com/polosenko/my_site/blob/master/src/templates/header.html'
+        }
+
+            var header = React.createClass ({
+            render: function (){
+                return (
+                          <div className="header">
+                                <div>{this.props.headreData} </div>
+                          </div>
+                        );
+                    }
+            });
+        ReactDOM.render (
+            <header />
+            document.getElementsById('main')
+        );
+
+
+        <!--var Badge = React.createClass ({-->
+        <!--render function () {-->
+            <!--return (<button className="btn-link-disabled-color" type="button">-->
+                <!--{this.props.title} <span className="badge">{this.props.number}</span>-->
+                <!--</button>)-->
+        <!--}-->
+    <!--});-->
+
+    <!--var Thumbnail = React.createClass ({-->
+        <!--render: function () {-->
+            <!--return <div class="col-sm-6 col-md-4">-->
+            <!--<div className ="thumbnail">-->
+                <!--<img-->
+            <!--src = {this.props.imageUrl}-->
+            <!--alt = "" />-->
+                    <!--<div className="caption">-->
+                    <!--<h3 {this.props.header}></h3>-->
+                <!--<p {this.props.description}></p>-->
+                <!--<p><Badge title {this.props.title} number {this.props.number}></p>-->
+            <!--</div>-->
+          <!--</div>-->
+       <!--</div>-->
+        <!--}-->
+   <!--});-->
+
+<!--//                var ThumbnailList1=React.createClass({-->
+<!--//                render: function (){-->
+<!--//                var list = this.props.headerData.map(function(thumbnailProps){-->
+<!--//                return <Thumbnail {...thumbnailProps}/>-->
+<!--//            });-->
+<!--//                return <div>-->
+<!--//                {list}-->
+<!--//                </div>-->
+<!--//            }-->
+<!--//            });-->
+
+            <!--var ThumbnailList=React.createClass({-->
+            <!--render: function (){-->
+                <!--var list = this.props.ThumbnailData.map(function(thumbnailProps){-->
+                <!--return <Thumbnail {...thumbnailProps}/>-->
+            <!--});-->
+                <!--return <div>-->
+                <!--{list}-->
+                <!--</div>-->
+            <!--}-->
+            <!--});-->
+<!--//                var ThumbnailList1=React.createClass({-->
+<!--//                render: function (){-->
+<!--//                var list = this.props.headerData.map(function(thumbnailProps){-->
+<!--//                return <Thumbnail {...thumbnailProps}/>-->
+<!--//            });-->
+<!--//                return <div>-->
+<!--//                {list}-->
+<!--//                </div>-->
+<!--//            }-->
+<!--//            });-->
+
+    <!--var options = {-->
+        <!--thumbnailData: [{-->
+            <!--title:'More',-->
+            <!--number: 1,-->
+            <!--header: 'React',-->
+            <!--description:'React is a fantastic new front end library for rendering web pages. React is a fantastic new front end library for rendering web pages.',-->
+            <!--imageUrl:'https://www.google.com.ua/search?q=react+native+image+size&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjclLeits_UAhXEJ5oKHYmAAxIQ_AUICygC&biw=1517&bih=654#imgrc=O3co6MVSKDD__M:'-->
+        <!--}, {-->
+            <!--title:'More',-->
+            <!--number: 2,-->
+            <!--header: 'React',-->
+            <!--description:'React is a fantastic new front end library for rendering web pages. React is a fantastic new front end library for rendering web pages.',-->
+            <!--imageUrl:'https://www.google.com.ua/search?q=react+native+image+size&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjclLeits_UAhXEJ5oKHYmAAxIQ_AUICygC&biw=1517&bih=654#imgrc=O3co6MVSKDD__M:'-->
+
+        <!--}],-->
+        <!--headreData:{-->
+
+        <!--}-->
+        <!--footerData: {-->
+            <!--link: 'git'-->
+            <!--}-->
+
+        <!--},-->
+    <!--};-->
+            <!--var element = React.createElement(ThumbnailList, options);-->
+            <!--React.render(element, document.querySelector('.container'));-->
 </script>
 
 </html>
