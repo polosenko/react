@@ -24,13 +24,19 @@ body {
     background: #f9f9f9;
 
 }
-.main {
-    border: 1px solid black;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-
+#content {
+    color: #404040;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    background: #f9f9f9;
 }
+/*.main {*/
+    /*border: 1px solid black;*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*margin: 0 auto;*/
+
+/*/*/
 header {
     background: url("img/header.jpg");
     color: white;
@@ -100,11 +106,11 @@ article>p {
     margin: 0 30px 20px 0;
 }
 
-.container {
-    border: 1px solid black;
-    width: 150px;
-    height: 150px;
-    margin: auto;
+/*.container {*/
+    /*border: 1px solid black;*/
+    /*width: 150px;*/
+    /*height: 150px;*/
+    /*margin: auto;*/
 
 }
 img {
