@@ -32,7 +32,7 @@
         render: function () {
             return <div className="col-xs-6 col-sm-4">
                 <div className="thumbnail">
-                    <img src={this.props.imageUrl} alt="..."> </img>/
+                    <img src={this.props.imageUrl} alt="..."> </img>
                     <div className="caption">
                         <h2>{this.props.header}</h2>
                         <p>{this.props.description}</p>
@@ -72,14 +72,14 @@
     var headerData = React.createClass ({
         render: function () {
             return <div>
-                    <img src={this.props.img} alt="..."/>
-                    <h1>{this.props.title}</h1>
-                    <h3>{this.props.text}</h3>
-                           <Badg
-                                input1={this.props.input1}
-                                input2={this.props.input2}
-                                inputValue={this.props.value} />
-              </div>
+                <img src={this.props.img} alt="..."/>
+                <h1>{this.props.title}</h1>
+                <h3>{this.props.text}</h3>
+                <Badg
+                        input1={this.props.input1}
+                        input2={this.props.input2}
+                        inputValue={this.props.value} />
+            </div>
         }
     });
 
@@ -102,7 +102,7 @@
             title: 'If you like to Get Update. add yourself',
             text: 'this free amashingbuzz template for corporate or new business will add new teaste',
             link: 'https://github.com/polosenko/react/blob/master/Lesson%201/Home_Task/header.html',
-            input1: 'enter your name',
+            input1:'enter your name',
             input2:'enter your email',
             inputValue:'"Add me Now"'
        },
