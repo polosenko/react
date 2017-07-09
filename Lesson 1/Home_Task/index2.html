@@ -12,10 +12,11 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 </head>>
 <body>
-<header class="header"></header>
+
 <div class="container"></div>
 
 </body>
+
 <script type="text/jsx">
     var Badge = React.createClass ({
         render: function () {
@@ -78,7 +79,22 @@
                 <Badg
                         input1={this.props.input1}
                         input2={this.props.input2}
-                        inputValue={this.props.value} />
+                        inputValue={this.props.value}
+                />
+
+            </div>
+        }
+    });
+
+
+    var App;
+    App = React.createClass({
+        render: function () {
+            console.log(this.props);
+            return
+            <div>
+                <thumbnailData={this.props.thumbnailData}/>
+                <headerData={this.props.headerData}/>
             </div>
         }
     });
@@ -113,10 +129,8 @@
         }
     };
 
-    var element = React.createElement(ThumbnailList, options);
+    var element = React.createElement(App, options);
     React.render(element, document.querySelector(".container"));
-    var elem = React.createElement(headerData, options);
-    React.render(elem, document.querySelector(".header"));
 
 </script>
 </html>
